@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เกมลับของเรา 💕</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🎵 เพลงพื้นหลัง -->
+<audio id="bgMusic" loop>
+  <source src="bg-music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 🎥 วิดีโอพื้นหลัง -->
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="bg.mp4" type="video/mp4">
+</video>
+
+<!-- 🔒 หน้าล็อกรหัส (Keypad) -->
+<div id="lock" class="card keypad">
+  <h2>🔒 ใส่รหัสลับ</h2>
+
+  <div id="pinDisplay">○ ○ ○</div>
+
+  <div class="keypad-grid">
+    <button type="button" onclick="pressKey(1)">1</button>
+    <button type="button" onclick="pressKey(2)">2</button>
+    <button type="button" onclick="pressKey(3)">3</button>
+
+    <button type="button" onclick="pressKey(4)">4</button>
+    <button type="button" onclick="pressKey(5)">5</button>
+    <button type="button" onclick="pressKey(6)">6</button>
+
+    <button type="button" onclick="pressKey(7)">7</button>
+    <button type="button" onclick="pressKey(8)">8</button>
+    <button type="button" onclick="pressKey(9)">9</button>
+
+    <button type="button" onclick="clearPin()">⌫</button>
+    <button type="button" onclick="pressKey(0)">0</button>
+    <button type="button" class="enter" onclick="checkPin()">✔️</button>
+  </div>
+
+  <p id="lockResult"></p>
+</div>
+
+<!-- 🎮 เกมคำถาม -->
+<div class="card" id="game" style="display:none;">
+  <h1 id="question">คำถามจะอยู่ตรงนี้</h1>
+  <div id="choices"></div>
+  <p id="result"></p>
+</div>
+
+<!-- 💌 การ์ดจดหมาย -->
+<div class="card" id="loveCard" style="display:none;">
+  <h1>💌 ถึงคนพิเศษของเรา</h1>
+  <p id="typingText"
+     style="font-size:18px;line-height:1.8;white-space:pre-line;min-height:120px;">
+  </p>
+
+  <button type="button" onclick="goToBirthday()">🎂 Happy Birthday</button>
+</div>
+
+<!-- 🎂 หน้า Happy Birthday -->
+<div id="birthdayPage" class="birthday-page">
+  <video id="birthdayVideo" autoplay playsinline>
+    <source src="birthday.mp4" type="video/mp4">
+  </video>
+
+  <audio id="birthdayMusic">
+    <source src="happy-birthday.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="birthday-text">🎉 Happy Birthday 🎂</div>
+</div>
+
+<!-- 📜 JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
