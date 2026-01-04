@@ -270,3 +270,14 @@ button {
   z-index: -10;        /* อยู่หลังทุกอย่าง */
   pointer-events: none; /* ❗ ห้ามรับการแตะ */
 }
+/* 🎥 วิดีโอพื้นหลัง */
+#bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  z-index: -10;
+  pointer-events: none;
+}
