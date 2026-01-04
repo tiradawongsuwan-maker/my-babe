@@ -239,4 +239,34 @@ button:active {
     transform: translateY(100vh);
     opacity: 0;
   }
+
+}
+/* ✅ แก้ปัญหาการ์ดเกินจอมือถือ */
+.card {
+  max-height: 90vh;          /* ไม่ให้สูงเกินจอ */
+  overflow-y: auto;          /* เลื่อนในกรอบได้ */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* กันปุ่มโดนบังด้านล่าง */
+button {
+  margin-bottom: 12px;
+}
+
+/* สำหรับมือถือจอเล็ก */
+@media (max-width: 480px) {
+  .card {
+    padding: 16px;
+    max-height: 88vh;
+  }
+}
+#bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  z-index: -10;        /* อยู่หลังทุกอย่าง */
+  pointer-events: none; /* ❗ ห้ามรับการแตะ */
 }
