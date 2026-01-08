@@ -53,7 +53,7 @@ const questions = [
   {
     q: "เราฉลองด้วยกันมากี่ปีแล้ว 😆",
     choices: ["6", "7", "8"],
-    answer: 2,
+    answer: 1,
     type: "video",
     src: "q2.mp4"
   },
@@ -305,4 +305,5 @@ if (bgVideo) bgVideo.muted = true;
 const birthdayVideo = document.getElementById("birthdayVideo");
 
 if (birthdayVideo) birthdayVideo.muted = true;
+
 
