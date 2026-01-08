@@ -133,7 +133,7 @@ function checkAnswer(index) {
     questionEl.innerText = "ถูกต้องแล้ว 💖";
     choicesEl.innerHTML = `
       ${media}
-      <p>ความทรงจำของเรา ✨</p>
+      <p> 🎉✨</p>
       <button onclick="nextQuestion()">➡️ ไปต่อ</button>
     `;
 
@@ -305,3 +305,4 @@ if (bgVideo) bgVideo.muted = true;
 const birthdayVideo = document.getElementById("birthdayVideo");
 
 if (birthdayVideo) birthdayVideo.muted = true;
+
